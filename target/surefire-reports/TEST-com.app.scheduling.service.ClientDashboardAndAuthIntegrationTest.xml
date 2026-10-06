@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="8.1" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant\target\test-classes;C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant\target\classes;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.4\spring-boot-starter-web-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.4\spring-boot-starter-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot\3.3.4\spring-boot-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.4\spring-boot-autoconfigure-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.4\spring-boot-starter-logging-3.3.4.jar;C:\Users\Aneska\.m2\repository\ch\qos\logback\logback-classic\1.5.8\logback-classic-1.5.8.jar;C:\Users\Aneska\.m2\repository\ch\qos\logback\logback-core\1.5.8\logback-core-1.5.8.jar;C:\Users\Aneska\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\Aneska\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\Aneska\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\Aneska\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Aneska\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.4\spring-boot-starter-json-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.4\spring-boot-starter-tomcat-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.30\tomcat-embed-core-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.30\tomcat-embed-websocket-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-web\6.1.13\spring-web-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-beans\6.1.13\spring-beans-6.1.13.jar;C:\Users\Aneska\.m2\repository\io\micrometer\micrometer-observation\1.13.4\micrometer-observation-1.13.4.jar;C:\Users\Aneska\.m2\repository\io\micrometer\micrometer-commons\1.13.4\micrometer-commons-1.13.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-webmvc\6.1.13\spring-webmvc-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-aop\6.1.13\spring-aop-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-expression\6.1.13\spring-expression-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.4\spring-boot-starter-data-jpa-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.4\spring-boot-starter-aop-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.4\spring-boot-starter-jdbc-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-jdbc\6.1.13\spring-jdbc-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\Aneska\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Aneska\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Aneska\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Aneska\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Aneska\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Aneska\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Aneska\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Aneska\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Aneska\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Aneska\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Aneska\.m2\repository\org\springframework\data\spring-data-jpa\3.3.4\spring-data-jpa-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\data\spring-data-commons\3.3.4\spring-data-commons-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-orm\6.1.13\spring-orm-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-tx\6.1.13\spring-tx-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-aspects\6.1.13\spring-aspects-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.4\spring-boot-starter-validation-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.30\tomcat-embed-el-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Aneska\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Aneska\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Aneska\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.6.0\springdoc-openapi-starter-webmvc-ui-2.6.0.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.6.0\springdoc-openapi-starter-webmvc-api-2.6.0.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.6.0\springdoc-openapi-starter-common-2.6.0.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.22\swagger-core-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.22\swagger-annotations-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.22\swagger-models-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.17.2\jackson-dataformat-yaml-2.17.2.jar;C:\Users\Aneska\.m2\repository\org\webjars\swagger-ui\5.17.14\swagger-ui-5.17.14.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.4\spring-boot-starter-test-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-test\3.3.4\spring-boot-test-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.4\spring-boot-test-autoconfigure-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Aneska\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Aneska\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Aneska\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Aneska\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Aneska\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Aneska\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\Aneska\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\Aneska\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Aneska\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Aneska\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Aneska\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Aneska\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\Aneska\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Aneska\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\Aneska\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Aneska\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-core\6.1.13\spring-core-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-jcl\6.1.13\spring-jcl-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-test\6.1.13\spring-test-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\Aneska\AppData\Local\Temp\surefire16513533591201432803\surefirebooter-20261005233622659_3.jar C:\Users\Aneska\AppData\Local\Temp\surefire16513533591201432803 2026-10-05T23-36-22_390-jvmRun1 surefire-20261005233622659_1tmp surefire_0-20261005233622659_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant\target\test-classes;C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant\target\classes;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.4\spring-boot-starter-web-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.4\spring-boot-starter-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot\3.3.4\spring-boot-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.4\spring-boot-autoconfigure-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.4\spring-boot-starter-logging-3.3.4.jar;C:\Users\Aneska\.m2\repository\ch\qos\logback\logback-classic\1.5.8\logback-classic-1.5.8.jar;C:\Users\Aneska\.m2\repository\ch\qos\logback\logback-core\1.5.8\logback-core-1.5.8.jar;C:\Users\Aneska\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\Aneska\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\Aneska\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\Aneska\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Aneska\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.4\spring-boot-starter-json-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.4\spring-boot-starter-tomcat-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.30\tomcat-embed-core-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.30\tomcat-embed-websocket-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-web\6.1.13\spring-web-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-beans\6.1.13\spring-beans-6.1.13.jar;C:\Users\Aneska\.m2\repository\io\micrometer\micrometer-observation\1.13.4\micrometer-observation-1.13.4.jar;C:\Users\Aneska\.m2\repository\io\micrometer\micrometer-commons\1.13.4\micrometer-commons-1.13.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-webmvc\6.1.13\spring-webmvc-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-aop\6.1.13\spring-aop-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-expression\6.1.13\spring-expression-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.4\spring-boot-starter-data-jpa-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.4\spring-boot-starter-aop-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.4\spring-boot-starter-jdbc-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-jdbc\6.1.13\spring-jdbc-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\Aneska\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Aneska\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Aneska\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Aneska\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Aneska\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Aneska\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Aneska\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Aneska\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Aneska\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Aneska\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Aneska\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Aneska\.m2\repository\org\springframework\data\spring-data-jpa\3.3.4\spring-data-jpa-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\data\spring-data-commons\3.3.4\spring-data-commons-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-orm\6.1.13\spring-orm-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-tx\6.1.13\spring-tx-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-aspects\6.1.13\spring-aspects-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.4\spring-boot-starter-validation-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.30\tomcat-embed-el-10.1.30.jar;C:\Users\Aneska\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Aneska\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Aneska\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Aneska\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.6.0\springdoc-openapi-starter-webmvc-ui-2.6.0.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.6.0\springdoc-openapi-starter-webmvc-api-2.6.0.jar;C:\Users\Aneska\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.6.0\springdoc-openapi-starter-common-2.6.0.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.22\swagger-core-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.22\swagger-annotations-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.22\swagger-models-jakarta-2.2.22.jar;C:\Users\Aneska\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.17.2\jackson-dataformat-yaml-2.17.2.jar;C:\Users\Aneska\.m2\repository\org\webjars\swagger-ui\5.17.14\swagger-ui-5.17.14.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.4\spring-boot-starter-test-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-test\3.3.4\spring-boot-test-3.3.4.jar;C:\Users\Aneska\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.4\spring-boot-test-autoconfigure-3.3.4.jar;C:\Users\Aneska\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Aneska\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Aneska\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Aneska\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Aneska\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Aneska\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Aneska\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\Aneska\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\Aneska\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Aneska\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Aneska\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Aneska\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Aneska\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Aneska\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\Aneska\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Aneska\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\Aneska\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Aneska\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-core\6.1.13\spring-core-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-jcl\6.1.13\spring-jcl-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\springframework\spring-test\6.1.13\spring-test-6.1.13.jar;C:\Users\Aneska\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Aneska"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="reactor.schedulers.defaultBoundedElasticOnVirtualThreads" value="true"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\Aneska\AppData\Local\Temp\surefire16513533591201432803\surefirebooter-20261005233622659_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
+    <property name="user.name" value="Aneska"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Aneska\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Aneska\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="9"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="5380"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Aneska\AppData\Local\Temp\_MEI000009f82\pywin32_system32;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Gradle\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\ffmpeg\bin;C:\Users\Aneska\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Aneska\AppData\Local\Programs\Python\Python313\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Aneska\AppData\Local\Microsoft\WindowsApps;C:\Users\Aneska\AppData\Local\Programs\Microsoft VS Code\bin;C:\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1\bin;;C:\Users\Aneska\.dotnet\tools;C:\Program Files\Gradlle\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\Aneska\AppData\Roaming\npm;C:\Program Files\ffmpeg\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.8+12-LTS-250"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[scheduling-api] "/>
+  </properties>
+  <testcase name="shouldListFutureAppointmentsForClient" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="1.299">
+    <system-out><![CDATA[2026-10-05T23:36:44.507-03:00  INFO 5380 --- [scheduling-api] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest]: ClientDashboardAndAuthIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T23:36:44.511-03:00  INFO 5380 --- [scheduling-api] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.app.scheduling.SchedulingApplication for test class com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest
+2026-10-05T23:36:44.530-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:44.537-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-05T23:36:44.548-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:44.610-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:44.611-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:44.890-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:44.918-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:45.003-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:45.007-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:45.018-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:45.020-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-05T23:36:45.022-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:45.022-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-05T23:36:45.023-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:45.124-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:45.129-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:45.284-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:45.290-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:45.487-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:45.509-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 0.953 seconds (process running for 22.374)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:45.517-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.client_id=? 
+        and a1_0.start_date_time>=? 
+        and a1_0.status<>? 
+    order by
+        a1_0.start_date_time
+]]></system-out>
+  </testcase>
+  <testcase name="shouldLoginSuccessfullyWithValidEmail" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="1.579">
+    <system-out><![CDATA[2026-10-05T23:36:45.824-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:45.825-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-05T23:36:45.828-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:45.857-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:45.857-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:46.305-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:46.342-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:46.520-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:46.533-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:46.542-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:46.543-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-05T23:36:46.544-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:46.545-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-05T23:36:46.545-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:46.686-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:46.690-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:46.911-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:46.917-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:47.173-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:47.303-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 1.471 seconds (process running for 24.169)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:47.355-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-10-05T23:36:47.396-03:00  INFO 5380 --- [scheduling-api] [           main] com.app.scheduling.service.AuthService   : Usuário autenticado com sucesso! ID: 3, Nome: Mariana Souza, Role: CLIENT
+]]></system-out>
+  </testcase>
+  <testcase name="shouldBlockCancellationOfOtherUserAppointment" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="1.799">
+    <system-out><![CDATA[2026-10-05T23:36:47.467-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:47.468-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-10-05T23:36:47.634-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:47.736-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:47.737-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:48.542-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:48.581-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:48.735-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:48.740-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:48.758-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:48.760-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-05T23:36:48.762-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:48.763-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-05T23:36:48.764-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:48.883-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:48.889-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:49.087-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:49.093-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:49.196-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:49.217-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 1.58 seconds (process running for 26.083)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:49.223-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    order by
+        a1_0.start_date_time desc
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="shouldRescheduleSuccessfullyWhenSlotIsFree" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="1.395">
+    <system-out><![CDATA[2026-10-05T23:36:49.263-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:49.264-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-10-05T23:36:49.283-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:49.347-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:49.348-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:49.896-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:49.928-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:50.042-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:50.045-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:50.061-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:50.063-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-05T23:36:50.068-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:50.069-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-05T23:36:50.070-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:50.181-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:50.187-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:50.395-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:50.405-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:50.569-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:50.591-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 1.304 seconds (process running for 27.456)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:50.599-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    order by
+        a1_0.start_date_time desc
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.professional_id=? 
+        and a1_0.id<>? 
+        and a1_0.status<>? 
+        and a1_0.start_date_time<? 
+        and a1_0.end_date_time>?
+2026-10-05T23:36:50.643-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.i.adapter.MockCalendarSyncAdapter  : [MOCK CALENDAR] Evento atualizado no calendario externo! Event ID: mock-cal-seed-001, Novo Inicio: 2026-10-07T11:00, Novo Fim: 2026-10-07T11:30
+2026-10-05T23:36:50.650-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.service.AppointmentService         : Agendamento reagendado com sucesso! ID: 1, Novo Início: 2026-10-07T11:00, Novo Fim: 2026-10-07T11:30
+]]></system-out>
+  </testcase>
+  <testcase name="shouldThrowUnauthorizedExceptionForUnknownEmail" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="0.941">
+    <system-out><![CDATA[2026-10-05T23:36:50.661-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:50.662-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-10-05T23:36:50.668-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:50.701-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:50.702-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:50.958-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:50.981-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:51.100-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:51.106-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:51.130-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:51.133-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-10-05T23:36:51.135-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:51.135-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-10-05T23:36:51.136-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:51.245-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:51.253-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:51.419-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:51.427-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:51.557-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:51.580-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 0.908 seconds (process running for 28.445)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:51.586-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+]]></system-out>
+  </testcase>
+  <testcase name="shouldFailRescheduleWhenNewSlotHasConflict" classname="com.app.scheduling.service.ClientDashboardAndAuthIntegrationTest" time="1.0">
+    <system-out><![CDATA[2026-10-05T23:36:51.608-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:51.609-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-10-05T23:36:51.649-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-05T23:36:51.685-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Starting ClientDashboardAndAuthIntegrationTest using Java 21.0.8 with PID 5380 (started by Aneska in C:\Users\Aneska\OneDrive\Software Engenering 2.0 - IA Assistant)
+2026-10-05T23:36:51.685-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T23:36:51.964-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T23:36:51.993-03:00  INFO 5380 --- [scheduling-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2026-10-05T23:36:52.093-03:00  INFO 5380 --- [scheduling-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-05T23:36:52.099-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-05T23:36:52.112-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T23:36:52.114-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-10-05T23:36:52.116-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn80: url=jdbc:h2:mem:schedulingdb user=ADMIN
+2026-10-05T23:36:52.117-03:00  INFO 5380 --- [scheduling-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-10-05T23:36:52.117-03:00  WARN 5380 --- [scheduling-api] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-05T23:36:52.222-03:00  INFO 5380 --- [scheduling-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T23:36:52.227-03:00  INFO 5380 --- [scheduling-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T23:36:52.378-03:00  WARN 5380 --- [scheduling-api] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T23:36:52.385-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-05T23:36:52.501-03:00  INFO 5380 --- [scheduling-api] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:schedulingdb'
+2026-10-05T23:36:52.554-03:00  INFO 5380 --- [scheduling-api] [           main] .s.ClientDashboardAndAuthIntegrationTest : Started ClientDashboardAndAuthIntegrationTest in 0.902 seconds (process running for 29.419)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-10-05T23:36:52.562-03:00  INFO 5380 --- [scheduling-api] [           main] c.a.s.config.DataInitializerRunner       : Banco de dados já contém registros. Pulando inicialização de dados mockados.
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.email,
+        u1_0.name,
+        u1_0.phone,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id 
+    from
+        services s1_0
+Hibernate: 
+    insert 
+    into
+        appointments
+        (client_id, created_at, end_date_time, external_calendar_event_id, notes, professional_id, service_id, start_date_time, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.client_id,
+        c1_0.id,
+        c1_0.active,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.role,
+        a1_0.created_at,
+        a1_0.end_date_time,
+        a1_0.external_calendar_event_id,
+        a1_0.notes,
+        a1_0.professional_id,
+        p1_0.id,
+        p1_0.active,
+        p1_0.email,
+        p1_0.name,
+        p1_0.phone,
+        p1_0.role,
+        a1_0.service_id,
+        s1_0.id,
+        s1_0.active,
+        s1_0.description,
+        s1_0.duration_minutes,
+        s1_0.name,
+        s1_0.price,
+        s1_0.professional_id,
+        a1_0.start_date_time,
+        a1_0.status 
+    from
+        appointments a1_0 
+    join
+        users c1_0 
+            on c1_0.id=a1_0.client_id 
+    join
+        users p1_0 
+            on p1_0.id=a1_0.professional_id 
+    join
+        services s1_0 
+            on s1_0.id=a1_0.service_id 
+    where
+        a1_0.professional_id=? 
+        and a1_0.id<>? 
+        and a1_0.status<>? 
+        and a1_0.start_date_time<? 
+        and a1_0.end_date_time>?
+]]></system-out>
+  </testcase>
+</testsuite>

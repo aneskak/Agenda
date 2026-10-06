@@ -1,0 +1,3 @@
+com\app\scheduling\SchedulingApplicationTests.class
+com\app\scheduling\service\AppointmentConflictIntegrationTest.class
+com\app\scheduling\service\ClientDashboardAndAuthIntegrationTest.class
