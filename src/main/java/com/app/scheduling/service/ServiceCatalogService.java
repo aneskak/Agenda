@@ -2,11 +2,9 @@ package com.app.scheduling.service;
 
 import com.app.scheduling.dto.request.CreateServiceRequest;
 import com.app.scheduling.dto.response.ServiceResponse;
-import com.app.scheduling.exception.BusinessException;
 import com.app.scheduling.exception.ResourceNotFoundException;
 import com.app.scheduling.model.Service;
 import com.app.scheduling.model.User;
-import com.app.scheduling.model.UserRole;
 import com.app.scheduling.repository.ServiceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,10 +43,7 @@ public class ServiceCatalogService {
     @Transactional
     public ServiceResponse create(CreateServiceRequest request) {
         User professional = userService.getEntityById(request.professionalId());
-
-        if (professional.getRole() != UserRole.PROFESSIONAL) {
-            throw new BusinessException("O usuário informado como profissional deve possuir o perfil PROFESSIONAL.");
-        }
+        professional.ensureProfessional();
 
         Service service = Service.builder()
                 .name(request.name().trim())
