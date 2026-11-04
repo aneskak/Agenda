@@ -6,6 +6,7 @@ import com.app.scheduling.exception.BusinessException;
 import com.app.scheduling.exception.ResourceNotFoundException;
 import com.app.scheduling.model.User;
 import com.app.scheduling.model.UserRole;
+import com.app.scheduling.model.vo.Email;
 import com.app.scheduling.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -43,13 +44,14 @@ public class UserService {
 
     @Transactional
     public UserSummaryResponse create(CreateUserRequest request) {
-        if (userRepository.existsByEmail(request.email())) {
+        String email = Email.of(request.email()).value();
+        if (userRepository.existsByEmail(request.email()) || userRepository.existsByEmail(email)) {
             throw new BusinessException("Já existe um usuário cadastrado com o e-mail: " + request.email());
         }
 
         User user = User.builder()
                 .name(request.name().trim())
-                .email(request.email().trim().toLowerCase())
+                .email(email)
                 .phone(request.phone() != null ? request.phone().trim() : null)
                 .role(request.role())
                 .active(true)

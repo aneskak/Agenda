@@ -1,5 +1,7 @@
 package com.app.scheduling.model;
 
+import com.app.scheduling.exception.BusinessException;
+import com.app.scheduling.exception.UnauthorizedException;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,4 +33,22 @@ public class User {
     @Builder.Default
     @Column(nullable = false)
     private Boolean active = true;
+
+    // --- Domain Behaviors (DDD) ---
+
+    public boolean isProfessional() {
+        return this.role == UserRole.PROFESSIONAL;
+    }
+
+    public void ensureActive() {
+        if (!Boolean.TRUE.equals(this.active)) {
+            throw new UnauthorizedException("Usuário inativo. Entre em contato com o suporte.");
+        }
+    }
+
+    public void ensureProfessional() {
+        if (!isProfessional()) {
+            throw new BusinessException("O usuário informado como profissional deve possuir o perfil PROFESSIONAL.");
+        }
+    }
 }

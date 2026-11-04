@@ -1,5 +1,6 @@
 package com.app.scheduling.model;
 
+import com.app.scheduling.exception.BusinessException;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -37,4 +38,15 @@ public class Service {
     @Builder.Default
     @Column(nullable = false)
     private Boolean active = true;
+
+    // --- Domain Behaviors (DDD) ---
+
+    public void ensureAvailableForBooking() {
+        if (!Boolean.TRUE.equals(this.active)) {
+            throw new BusinessException("O serviço solicitado não está mais ativo para novos agendamentos.");
+        }
+        if (this.professional != null && !Boolean.TRUE.equals(this.professional.getActive())) {
+            throw new BusinessException("O profissional responsável por este serviço está inativo.");
+        }
+    }
 }

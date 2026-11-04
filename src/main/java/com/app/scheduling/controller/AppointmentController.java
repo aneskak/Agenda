@@ -1,11 +1,11 @@
 package com.app.scheduling.controller;
 
+import com.app.scheduling.config.security.CurrentUser;
 import com.app.scheduling.dto.request.CreateAppointmentRequest;
 import com.app.scheduling.dto.request.RescheduleAppointmentRequest;
 import com.app.scheduling.dto.response.AppointmentResponse;
 import com.app.scheduling.dto.response.ErrorResponse;
-import com.app.scheduling.exception.UnauthorizedException;
-import com.app.scheduling.service.AppointmentService;
+import com.app.scheduling.service.AppointmentUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -27,7 +27,7 @@ import java.util.List;
 @Tag(name = "Agendamentos", description = "Endpoints para criação, consulta, cancelamento e reagendamento de horários")
 public class AppointmentController {
 
-    private final AppointmentService appointmentService;
+    private final AppointmentUseCase appointmentUseCase;
 
     @Operation(summary = "Criar novo agendamento", description = "Cria um agendamento validando conflitos de horário e sincronizando com calendário.")
     @ApiResponses({
@@ -41,7 +41,7 @@ public class AppointmentController {
     })
     @PostMapping
     public ResponseEntity<AppointmentResponse> create(@Valid @RequestBody CreateAppointmentRequest request) {
-        AppointmentResponse response = appointmentService.create(request);
+        AppointmentResponse response = appointmentUseCase.create(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
@@ -53,15 +53,10 @@ public class AppointmentController {
     })
     @GetMapping("/me")
     public ResponseEntity<List<AppointmentResponse>> getMyAppointments(
-            @Parameter(description = "ID do usuário logado enviado pelo frontend")
-            @RequestHeader(value = "X-User-Id", required = false) Long headerUserId,
-            @RequestParam(value = "userId", required = false) Long paramUserId
+            @Parameter(hidden = true)
+            @CurrentUser(required = true) Long userId
     ) {
-        Long userId = (headerUserId != null) ? headerUserId : paramUserId;
-        if (userId == null) {
-            throw new UnauthorizedException("Identificação do usuário obrigatória. Envie o header 'X-User-Id' ou parâmetro 'userId'.");
-        }
-        List<AppointmentResponse> list = appointmentService.findFutureByClient(userId);
+        List<AppointmentResponse> list = appointmentUseCase.findFutureByClient(userId);
         return ResponseEntity.ok(list);
     }
 
@@ -72,7 +67,7 @@ public class AppointmentController {
             @RequestParam(required = false) Long professionalId,
             @RequestParam(required = false) Long clientId
     ) {
-        List<AppointmentResponse> list = appointmentService.findAll(professionalId, clientId);
+        List<AppointmentResponse> list = appointmentUseCase.findAll(professionalId, clientId);
         return ResponseEntity.ok(list);
     }
 
@@ -84,7 +79,7 @@ public class AppointmentController {
     })
     @GetMapping("/{id}")
     public ResponseEntity<AppointmentResponse> getById(@PathVariable Long id) {
-        AppointmentResponse response = appointmentService.findById(id);
+        AppointmentResponse response = appointmentUseCase.findById(id);
         return ResponseEntity.ok(response);
     }
 
@@ -104,9 +99,10 @@ public class AppointmentController {
     public ResponseEntity<AppointmentResponse> reschedule(
             @PathVariable Long id,
             @Valid @RequestBody RescheduleAppointmentRequest request,
-            @RequestHeader(value = "X-User-Id", required = false) Long headerUserId
+            @Parameter(hidden = true)
+            @CurrentUser Long userId
     ) {
-        AppointmentResponse response = appointmentService.reschedule(id, request, headerUserId);
+        AppointmentResponse response = appointmentUseCase.reschedule(id, request, userId);
         return ResponseEntity.ok(response);
     }
 
@@ -123,9 +119,10 @@ public class AppointmentController {
     @DeleteMapping("/{id}")
     public ResponseEntity<AppointmentResponse> delete(
             @PathVariable Long id,
-            @RequestHeader(value = "X-User-Id", required = false) Long headerUserId
+            @Parameter(hidden = true)
+            @CurrentUser Long userId
     ) {
-        AppointmentResponse response = appointmentService.cancel(id, headerUserId);
+        AppointmentResponse response = appointmentUseCase.cancel(id, userId);
         return ResponseEntity.ok(response);
     }
 
@@ -133,9 +130,10 @@ public class AppointmentController {
     @PatchMapping("/{id}/cancel")
     public ResponseEntity<AppointmentResponse> cancel(
             @PathVariable Long id,
-            @RequestHeader(value = "X-User-Id", required = false) Long headerUserId
+            @Parameter(hidden = true)
+            @CurrentUser Long userId
     ) {
-        AppointmentResponse response = appointmentService.cancel(id, headerUserId);
+        AppointmentResponse response = appointmentUseCase.cancel(id, userId);
         return ResponseEntity.ok(response);
     }
 }
