@@ -38,3 +38,7 @@ springdoc:
     operations-sorter: method
   api-docs:
     path: /v3/api-docs
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  OPENAI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
